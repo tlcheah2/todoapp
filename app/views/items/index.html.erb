@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>My TODO List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Done</th>
+      <th>Task</th>
+      <th>Due Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+		<td><%= check_box_tag "active", 1, item.done, :readonly => true, :disabled => true %> </td>
+        <td><%= item.task %></td>
+        <td><%= item.duedate %></td>
+        <td><%= link_to 'Show', item %></td>
+        <td><%= link_to 'Edit', edit_item_path(item) %></td>
+        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to image_tag("add2.jpg",size: "180x40"), new_item_path%>
