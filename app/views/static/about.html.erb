@@ -4,9 +4,24 @@
 	<title>About Us</title>
 </head>
 <body>
+	<div class="container">
 	<p>We are a group of 4 Computer Science Student who wish to change the world.</p>
-	<section>
-		<img src="images" alt="">
+	<section id="about-gallery">
+		<table class="table table-condensed">
+		<tr>
+		<td><%= image_tag("tekloon.jpg", :alt => "TekLoon", size: "180x180") %></td>
+		<td id="about-description"><b>Tek Loon</b><p>A passionate guy in technology</p></td>
+		<td><%= image_tag("chinwei.jpg", :alt => "ChinWei", size: "180x180") %></td>
+		<td id="about-description"><b>Chin Wei</b></td>
+		</tr>
+		<tr>
+		<td><%= image_tag("sam.jpg", :alt => "Sam", size: "180x180") %></td>
+		<td id="about-description"><b>Sam</b></td>
+		<td><%= image_tag("vic.jpg", :alt => "Vic", size: "180x180") %></td>
+		<td id="about-description"><b>Vic Chang</b></td>
+		</tr>
+		</table>
 	</section>
+	</div>
 </body>
 </html>
